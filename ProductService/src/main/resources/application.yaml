@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://${DB_HOST:localhost}:5432/ProductDB?currentSchema=productSchema
+    url: jdbc:postgresql://${DB_HOST:localhost}:5432/ProductDB?currentSchema=product
     username: postgres
     password: root
     driverClassName:  org.postgresql.Driver
@@ -11,6 +11,12 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+
  # application:
   #  name: PRODUCT-SERVICE
   #config:

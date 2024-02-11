@@ -1,12 +1,15 @@
 package com.neo.productService.model;
 
+import lombok.Data;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Product {
+@Data
+public class ProductRequest {
 
-    private String productId;
-    private  String productNAme;
+    private  String productName;
+
     private  long price;
+
     private long quantity;
 }
